@@ -1,0 +1,16 @@
+spring:
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: org.postgresql.Driver
+        password: password
+        url: jdbc:postgresql://localhost:5432/spring_data_with_example
+        username: spring-example
+        hikari:
+          maximum-pool-size: 10
+          connection-test-query: select 1
+          idle-timeout: 120000
+    jpa:
+        database: postgresql
+        hibernate:
+            ddl-auto: update
+        show-sql: false  
